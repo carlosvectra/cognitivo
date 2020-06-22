@@ -1,0 +1,7 @@
+Foi utilizado a plataforma DataBricks
+
+Arquivo: codigo_scala.txt - contendo código spark que transforma o arquivo load.csv em um arquivo no formato 
+Apache Parquet com armazenamento colunar.
+
+Arquivo: Arquivo.parquet ( dados em formato Apacha Parquet )
+
