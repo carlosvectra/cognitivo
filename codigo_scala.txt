@@ -1,0 +1,14 @@
+%scala
+
+val csvdata = spark.read.options(Map(
+    "header" -> "true",
+    "ignoreLeadingWhiteSpace" -> "true",
+    "ignoreTrailingWhiteSpace" -> "true",
+    "timestampFormat" -> "yyyy-MM-dd HH:mm:ss.SSSZZZ",
+    "inferSchema" -> "true",
+    "mode" -> "FAILFAST"))
+  .csv("/FileStore/tables/load.csv");
+
+csvdata.write.parquet("/FileStore/tables/arquivo.parquet")
+
+
